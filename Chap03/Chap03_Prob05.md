@@ -10,7 +10,7 @@ Mimi Wang
 "P(T_{13} \\leq ?) = 0.10")
 
 ``` r
-# Get the Probability
+# Get the Limit
 lim <- qt(0.1, df = 13, lower.tail = TRUE)
 
 # Visualize
