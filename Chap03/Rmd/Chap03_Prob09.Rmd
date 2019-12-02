@@ -1,0 +1,41 @@
+---
+title: "Chapter 3: Basic Statistics: A Review"
+author: "Mimi Wang"
+date: "12/1/2019"
+output:
+  github_document:
+    pandoc_args: --webtex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(latex2exp)
+```
+
+### Problem 9
+
+Find the **(a)** mean, **(b)** median, and **(c)** variance for the following set of scores:
+
+{0, 2, 5, 6, 3, 3, 3, 1, 4, 3}
+
+```{r}
+scores <- c(0, 2, 5, 6, 3, 3, 3, 1, 4, 3)
+
+# mean
+mean(scores)
+
+# median
+median(scores)
+
+# variance
+var(scores)
+
+```
+
+**d.** Find the set of Z scores for the data.
+
+```{r}
+z_scores <- (scores - mean(scores)) / (var(scores))
+z_scores
+```
+
