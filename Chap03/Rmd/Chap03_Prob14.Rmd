@@ -1,0 +1,34 @@
+---
+title: "Chapter 3: Basic Statistics: A Review"
+author: "Mimi Wang"
+date: "12/2/2019"
+output:
+  github_document:
+    pandoc_args: --webtex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(latex2exp)
+```
+
+### Problem 14
+
+From two normal populations assumed to have the same variance, independent random samples of sizes 15 and 19 were drawn.  The first sample (with $n_1 = 15$) yielded mean and standard deviation 111.6 and 9.5, respectively, while the second sample ($n_2 = 19$) gave mean and standard deviation 100.9 and 11.5, respectively.  The estimated standard error of the difference in sample means is _______.
+
+The equation for pooled variance:
+$$S_p^2 = \frac{(n_1 - 1)S_1^2 + (n_2 - 1)S_2^2}{n_1 + n_2 - 2}$$
+
+The equation for standard error:
+$$SE = S_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}$$
+
+```{r}
+# First, calculate the pooled sample variance
+var_pooled <- ((15 - 1) * 9.5^2 + (19 - 1) * 11.5^2) / (15 + 19 - 2)
+
+# Then calculate the standard error
+se <- sqrt(var_pooled) * sqrt(1 / 15 + 1 / 19)
+se
+```
+
+
