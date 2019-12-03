@@ -1,0 +1,23 @@
+---
+title: "Chapter 3: Basic Statistics: A Review"
+author: "Mimi Wang"
+date: "12/2/2019"
+output:
+  github_document:
+    pandoc_args: --webtex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(latex2exp)
+```
+
+### Problem 12
+
+The limits of a 95% confidence interval for the mean $\mu$ of a normal population with unknown variance are found by adding to and subtracting from the sample mean a certain multiple of the estimated standard error of the sample mean.  If the sample size on which this confidence interval is based is 28, the *multiple* referred to in the previous sentence is the number ________.
+
+```{r}
+multiple <- qt(0.975, df = 28 - 1, lower.tail = TRUE)
+multiple
+```
+
