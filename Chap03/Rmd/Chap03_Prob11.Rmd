@@ -1,0 +1,34 @@
+---
+title: "Chapter 3: Basic Statistics: A Review"
+author: "Mimi Wang"
+date: "12/2/2019"
+output:
+  github_document:
+    pandoc_args: --webtex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(latex2exp)
+```
+
+### Problem 11
+
+Suppose that the weight $W$ of male patients registered at a diet clinic has the normal distribution with mean 190 and variance 100.
+
+**a.** For a random sample of patient of size $n = 25$, the expression $P(\overline{W} < 180)$ in which $\overline{W}$ denotes the sample mean weight, is equivalent to saying $P(Z > ?)$. [*Note:* $Z$ is a standard normal random variable.]
+
+```{r}
+z_score <- (190 - 180) / (sqrt(100) / sqrt(25))
+z_score
+```
+
+**b.** Find an interval $(a, b)$ such that $P(a < \overline{W} < b) = .80$ for the same random sample in part (a).
+
+```{r}
+a <- qnorm(0.90, mean = 190, sd = sqrt(100) / sqrt(25), lower.tail = FALSE)
+b <- qnorm(0.90, mean = 190, sd = sqrt(100) / sqrt(25), lower.tail = TRUE)
+
+a; b
+```
+

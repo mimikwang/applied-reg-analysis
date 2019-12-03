@@ -35,7 +35,7 @@ var(scores)
 **d.** Find the set of Z scores for the data.
 
 ```{r}
-z_scores <- (scores - mean(scores)) / (var(scores))
+z_scores <- (scores - mean(scores)) / sqrt(var(scores))
 z_scores
 ```
 
