@@ -1,0 +1,44 @@
+Chapter 3: Basic Statistics: A Review
+================
+Mimi Wang
+12/2/2019
+
+### Problem 16
+
+Test the null hypothesis that the true population average body weight is
+the same for two independent diagnosis groups from one hospital versus
+the alternative hypothesis that these two population averages are
+different, using the following data:
+
+Diagnosis group 1 data: \[132, 145, 124, 122, 165, 144, 151\]
+
+Diagnosis group 2 data: \[141, 139, 172, 131, 150, 125\]
+
+You may assume that the populations from which the data come are each
+normally distributed, with equal population variances. What conclusion
+should be drawn, with ![\\alpha =
+.05](https://latex.codecogs.com/png.latex?%5Calpha%20%3D%20.05
+"\\alpha = .05")?
+
+``` r
+# Get T score
+data_1 <- c(132, 145, 124, 122, 165, 144, 151)
+data_2 <- c(141, 139, 172, 131, 150, 125)
+
+var_pooled <- (length(data_1) - 1) * var(data_1) + (length(data_2) - 1) * var(data_2)
+var_pooled <- var_pooled / (length(data_1) + length(data_2) - 2)
+
+T <- (mean(data_1) - mean(data_2)) / (sqrt(var_pooled) * sqrt((1 / length(data_1)) + (1 / length(data_2))))
+abs(T)
+```
+
+    ## [1] 0.2892993
+
+``` r
+# Get T Score
+qt(0.975, df = length(data_1) + length(data_2) - 1)
+```
+
+    ## [1] 2.178813
+
+2.18 \> 0.289, so we do not reject the null hypothesis.
