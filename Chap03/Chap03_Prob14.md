@@ -16,12 +16,16 @@ gave mean and standard deviation 100.9 and 11.5, respectively. The
 estimated standard error of the difference in sample means is
 \_\_\_\_\_\_\_.
 
-The equation for pooled variance:   
-![S\_p^2 = \\frac{(n\_1 - 1)S\_1^2 + (n\_2 - 1)S\_2^2}{n\_1 + n\_2
-- 2}](https://latex.codecogs.com/png.latex?S_p%5E2%20%3D%20%5Cfrac%7B%28n_1%20-%201%29S_1%5E2%20%2B%20%28n_2%20-%201%29S_2%5E2%7D%7Bn_1%20%2B%20n_2%20-%202%7D
-"S_p^2 = \\frac{(n_1 - 1)S_1^2 + (n_2 - 1)S_2^2}{n_1 + n_2 - 2}")  
+The equation for pooled variance:
 
-The equation for standard error:   
+  
+![S\_p^2 = \\frac{(n\_1 - 1) S\_1^2 + (n\_2 - 1) S\_2^2}{n\_1 +
+n\_2-2}](https://latex.codecogs.com/png.latex?S_p%5E2%20%3D%20%5Cfrac%7B%28n_1%20-%201%29%20S_1%5E2%20%2B%20%28n_2%20-%201%29%20S_2%5E2%7D%7Bn_1%20%2B%20n_2-2%7D
+"S_p^2 = \\frac{(n_1 - 1) S_1^2 + (n_2 - 1) S_2^2}{n_1 + n_2-2}")  
+
+The equation for standard error:
+
+  
 ![SE = S\_p \\sqrt{\\frac{1}{n\_1} +
 \\frac{1}{n\_2}}](https://latex.codecogs.com/png.latex?SE%20%3D%20S_p%20%5Csqrt%7B%5Cfrac%7B1%7D%7Bn_1%7D%20%2B%20%5Cfrac%7B1%7D%7Bn_2%7D%7D
 "SE = S_p \\sqrt{\\frac{1}{n_1} + \\frac{1}{n_2}}")  
